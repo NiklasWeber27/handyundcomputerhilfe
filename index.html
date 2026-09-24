@@ -450,28 +450,33 @@
     .mock-hero-title{ font-size:18px; }
   }
 
-  /* ---------- testimonial: elevated pull-quote card ---------- */
+  /* ---------- testimonials: two elevated pull-quote cards side by side ---------- */
+  .testimonial-row{
+    display:grid; grid-template-columns:1fr 1fr; gap:28px;
+    max-width:980px; margin:90px auto 0;
+  }
+  @media (max-width:800px){ .testimonial-row{ grid-template-columns:1fr; } }
   .testimonial-card{
-    position:relative; max-width:720px; margin: 90px auto 0;
+    position:relative;
     background: linear-gradient(180deg,#0e1b3f,#050914);
-    border-radius:24px; padding: 56px 48px;
+    border-radius:24px; padding: 40px 36px;
     box-shadow: 0 60px 120px -40px rgba(20,50,140,.45), 0 0 0 1px rgba(255,255,255,.06);
     text-align:left;
   }
   .testimonial-card .quote-mark{
-    font-size:52px; color: var(--blue-mid); line-height:1; margin-bottom:10px; font-weight:700; font-family: Georgia, serif;
+    font-size:44px; color: var(--blue-mid); line-height:1; margin-bottom:8px; font-weight:700; font-family: Georgia, serif;
   }
   .testimonial-card .lead-line{
-    font-size:22px; line-height:1.4; color:#fff; font-weight:600; margin-bottom:18px; letter-spacing:-0.01em;
+    font-size:19px; line-height:1.4; color:#fff; font-weight:600; margin-bottom:16px; letter-spacing:-0.01em;
   }
   .testimonial-card .rest{
-    font-size:15px; line-height:1.7; color: var(--muted-2);
+    font-size:14.5px; line-height:1.65; color: var(--muted-2);
   }
-  .testimonial-card .rest p{ margin-bottom:14px; }
+  .testimonial-card .rest p{ margin-bottom:12px; }
   .testimonial-card .rest p:last-child{ margin-bottom:0; }
   .testimonial-card .attr-row{
-    display:flex; align-items:center; gap:12px; margin-top:30px;
-    padding-top:24px; border-top:1px solid rgba(255,255,255,.12);
+    display:flex; align-items:center; gap:12px; margin-top:26px;
+    padding-top:22px; border-top:1px solid rgba(255,255,255,.12);
   }
   .testimonial-card .attr-dot{
     width:34px; height:34px; border-radius:50%;
@@ -481,8 +486,9 @@
   .testimonial-card .attr-text{ font-size:13px; color: var(--muted-2); }
   .testimonial-card .attr-text b{ display:block; color:#fff; font-size:14px; font-weight:600; }
   @media (max-width:480px){
-    .testimonial-card{ padding:34px 24px; border-radius:18px; margin-top:64px; }
-    .testimonial-card .lead-line{ font-size:19px; }
+    .testimonial-row{ margin-top:64px; }
+    .testimonial-card{ padding:30px 22px; border-radius:18px; }
+    .testimonial-card .lead-line{ font-size:18px; }
   }
 
   .portfolio-strip{
@@ -779,17 +785,32 @@
       </div>
     </div>
 
-    <div class="testimonial-card" data-reveal>
-      <div class="quote-mark">"</div>
-      <div class="lead-line">Ich bin mit der Zusammenarbeit und dem Ergebnis sehr zufrieden.</div>
-      <div class="rest">
-        <p>Von Anfang an hat man gemerkt, dass viel Wert darauf gelegt wurde, die Website passend zu meinem Konzept und meinem Unternehmen zu gestalten. Verschiedene Entwürfe wurden persönlich mit mir besprochen und meine Änderungswünsche schnell und unkompliziert umgesetzt.</p>
-        <p>Besonders praktisch finde ich, dass ich auch als jemand ohne Vorkenntnisse kleinere Änderungen selbst vornehmen kann. Auch nach der Fertigstellung wurde noch einmal nachgefragt, ob alles passt und ob weitere Anpassungen nötig sind.</p>
-        <p>Insgesamt eine sehr angenehme, unkomplizierte Zusammenarbeit und eine Website, mit der ich rundum zufrieden bin. Eine klare Empfehlung!</p>
+    <div class="testimonial-row">
+      <div class="testimonial-card" data-reveal>
+        <div class="quote-mark">"</div>
+        <div class="lead-line">Ich bin mit der Zusammenarbeit und dem Ergebnis sehr zufrieden.</div>
+        <div class="rest">
+          <p>Von Anfang an hat man gemerkt, dass viel Wert darauf gelegt wurde, die Website passend zu meinem Konzept und meinem Unternehmen zu gestalten. Verschiedene Entwürfe wurden persönlich mit mir besprochen und meine Änderungswünsche schnell und unkompliziert umgesetzt.</p>
+          <p>Besonders praktisch finde ich, dass ich auch als jemand ohne Vorkenntnisse kleinere Änderungen selbst vornehmen kann. Auch nach der Fertigstellung wurde noch einmal nachgefragt, ob alles passt und ob weitere Anpassungen nötig sind.</p>
+          <p>Insgesamt eine sehr angenehme, unkomplizierte Zusammenarbeit und eine Website, mit der ich rundum zufrieden bin. Eine klare Empfehlung!</p>
+        </div>
+        <div class="attr-row">
+          <div class="attr-dot"></div>
+          <div class="attr-text"><b>Moritz Egger-Riedmüller</b>Mozi's</div>
+        </div>
       </div>
-      <div class="attr-row">
-        <div class="attr-dot"></div>
-        <div class="attr-text"><b>Moritz Egger-Riedmüller</b>Mozi's</div>
+
+      <div class="testimonial-card" data-reveal>
+        <div class="quote-mark">"</div>
+        <div class="lead-line">Wir sind sehr zufrieden mit der Erstellung unserer Restaurant-Webseite von Niklas.</div>
+        <div class="rest">
+          <p>Die Umsetzung war professionell, kreativ, übersichtlich und genau auf unsere Wünsche abgestimmt. Die Kommunikation war unkompliziert und sämtliche Änderungswünsche wurden schnell und zuverlässig umgesetzt.</p>
+          <p>Wir können Niklas uneingeschränkt weiterempfehlen und bedanken uns für die tolle Zusammenarbeit!</p>
+        </div>
+        <div class="attr-row">
+          <div class="attr-dot"></div>
+          <div class="attr-text"><b>Sonja Kapplmüller</b>one_green table</div>
+        </div>
       </div>
     </div>
 
